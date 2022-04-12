@@ -1,0 +1,125 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Screen Recorder</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <div class="center"><button id="start-camera">Start Camera</button></div>
+    <video id="video" autoplay muted></video>
+    <div class="center"><button id="start-record">Start Recording</button></div>
+    <div class="center"><button id="stop-record">Stop Recording</button></div>
+    <div id="spaceGif" class="spaceGif">
+      <video
+        style="display: none; z-index: 1;"
+        id="videoResult"
+        class="videoResult"
+        autoplay
+        loop
+        muted
+        src=""
+      ></video>
+    </div>
+    <a id="download-video" download="test.webm">Download Video</a>
+    </div>
+    <br />
+    <br />
+
+    <!-- pop up -->
+    <div class="popup">
+      <div class="popup-content">
+        <span class="close-btn">&times;</span>
+        <p>Chọn gif</p>
+        <div class="center">
+          <h2>Chọn hiệu ứng</h2>
+          <div class="float_left">
+            <button id="gif_effect_1" border="1px">
+              <img
+                id="effect_1"
+                src="../gif/la_roi.gif"
+                onclick="borderEffect1()"
+              />
+            </button>
+          </div>
+          <div class="clear_left"></div>
+          <!-- chọn biểu tượng -->
+          <h2>Chọn biểu tượng</h2>
+            <div class="float_left">
+              <button id="gif_icon_1" border="1px">
+                <img
+                  id="icon_1"
+                  src="../gif/dwC0qv.gif"
+                  onclick="borderIcon1()"
+                />
+              </button>
+            </div>
+            <div class="float_left">
+              <button id="gif_icon_2" border="1px">
+                <img
+                  id="icon_2"
+                  src="../gif/santa-and-reindeer.gif"
+                  onclick="borderIcon2()"
+                />
+              </button>
+            </div>
+            <div class="float_left">
+              <button id="gif_icon_3" border="1px">
+                <img
+                  id="icon_3"
+                  src="../gif/img_logo.gif"
+                  onclick="borderIcon3()"
+                />
+              </button>
+            </div>
+          <div class="clear_left"></div>
+          <!-- Chọn khung -->
+          <h2>Chọn khung</h2>
+          <div>
+            <div class="float_left">
+              <button id="gif_frames_1">
+                <img
+                  id="frames_1"
+                  src="../gif/khung_nen_1.gif"
+                  onclick="borderFrames1()"
+                />
+              </button>
+            </div>
+          </div>
+          <div class="clear_left"></div>
+          <h2>Ghi lời chúc</h2>
+          <div>
+            <input id="holiday_greetings" type="text" />
+          </div>
+          <div class="clear_left"></div>
+          <br>
+          <input
+            type="button"
+            class="accept-btn"
+            onclick="displayGit()"
+            value="Xác nhận"
+          />
+        </div>
+      </div>
+    </div>
+    <!-- <div align="center">
+      <div id="abc"></div>
+      <div id="myDIV" draggable="true" ondragstart="drag(event)"></div>
+    </div> -->
+
+    <div align="center">
+      <button id="popup-btn" class="popup-btn">Chọn gif</button>
+    </div>
+
+    <script src="./script.js"></script>
+    <script
+      language="javascript"
+      src="https://code.jquery.com/jquery-3.1.0.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://unpkg.com/webcam-easy/dist/webcam-easy.min.js"
+    ></script>
+  </body>
+</html>
